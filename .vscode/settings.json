@@ -1,0 +1,8 @@
+{
+  "robotcode.robot.variables": {
+    "OS": "web",
+    "DEVICE": "chromium_desktop",
+    "MAIN_OR_SUB": "main",
+    "EXEC_ENV": "TEST"
+  }
+}

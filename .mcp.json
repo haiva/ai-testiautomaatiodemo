@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "robotmcp": {
+      "command": "robotmcp"
+    },
+    "appium-mcp": {
+      "command": "npx",
+      "args": ["-y", "appium-mcp@latest"],
+      "env": {
+        "ANDROID_HOME": "${ANDROID_HOME}"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(robot:*)",
+      "Bash(robocop:*)",
+      "Bash(scripts/aja.sh:*)",
+      "Bash(adb devices)",
+      "Bash(adb shell:*)",
+      "Bash(git diff:*)",
+      "Bash(git status)",
+      "Bash(grep:*)",
+      "mcp__robotmcp",
+      "mcp__appium-mcp"
+    ],
+    "deny": [
+      "Read(./.env)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/hooks/block_secrets.py\"" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/hooks/check_structure.py\"" }
+        ]
+      }
+    ]
+  }
+}

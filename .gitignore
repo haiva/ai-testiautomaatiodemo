@@ -1,0 +1,13 @@
+.env
+.venv/
+results/
+__pycache__/
+*.pyc
+.claude/settings.local.json
+CLAUDE.local.md
+browser/
+log.html
+report.html
+output.xml
+.robocop_cache/
+.robotmcp_artifacts/
